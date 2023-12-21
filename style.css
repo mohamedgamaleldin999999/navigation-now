@@ -5,15 +5,16 @@
 
 .box {
   align-items: center;
-  background-color: LightGray;
+  background-color: rgb(199, 177, 177);
   border: 2px solid DarkGray;
   display: flex;
-  font-size: 2em;
-  height: 240px;
+  font-size: 1em;
+  height: 100%;
   justify-content: center;
   margin: 0.5em;
   text-align: center;
-  width: 240px;
+  width: 100%;
+  display: none;
 }
 
 .btn {
@@ -27,7 +28,7 @@
 }
 
 .is-selected {
-  border-color: gold;
+  display: block;
 }
 
 .btn:disabled {
