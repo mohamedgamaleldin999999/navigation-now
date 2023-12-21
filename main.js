@@ -7,7 +7,16 @@ const lessons = [
     convo: '',
     newVocab: [],
 
-  }
+  },
+  {
+    lesson: 2,
+    section: 'introduction',
+    title: 'introduction to lesson two',
+    imgUrl: '',
+    convo: '',
+    newVocab: [],
+
+  },
 ]
 
 const container = document.querySelector('.container');
@@ -18,12 +27,27 @@ lessons.forEach(lesson => {
   slide.classList.add('slide');
   container.appendChild(slide);
   slide.classList.add('box');
+  slide.setAttribute('id', lessons.indexOf(lesson) )
   const title =  document.createElement('h2');
   title.textContent = lesson.title;
   slide.appendChild(title);
   const content = document.createElement('div')
   slide.appendChild(content)
 });
+
+const lessonOne = document.querySelector('.lesson-one');
+const slide1 = document.getElementById('1')
+const all = document.querySelectorAll('.box');
+
+function go(){
+  all.forEach(slee => {
+    slee.classList.remove("is-selected")
+  })
+  slide1.classList.add("is-selected");
+  console.log(455555)
+}
+lessonOne.addEventListener('click', go)
+
 
 
 
@@ -37,6 +61,9 @@ let listLength = tile.length - 1;
 
 /* Set interface at page load */
 prevBtn.setAttribute("disabled", "");
+nextBtn.textContent = 'Start';
+
+let currentSlide = document.querySelector('.is-selected')
 
 
 // Counter from MDN Closures article; https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
@@ -89,6 +116,7 @@ function selectNext() {
     nextBtn.setAttribute("disabled", "");
   } else {
     prevBtn.removeAttribute("disabled");
+    nextBtn.textContent = 'Next';
   }
 }
 
@@ -114,6 +142,7 @@ function selectPrev() {
    */
   if (currentIndex - 1 <= 0) {
     prevBtn.setAttribute("disabled", "");
+    nextBtn.textContent = 'Start';
   } else {
     nextBtn.removeAttribute("disabled");
   }
