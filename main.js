@@ -1,53 +1,144 @@
 const lessons = [
   {
-    lesson: 1,
-    section: 'introduction',
-    title: 'introduction to lesson one',
-    imgUrl: '',
-    convo: '',
-    newVocab: [],
-
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: 'Introduction',
+            firstBox: 'First Box',
+            secondBox: 'Second Box',
+            thirdBox: 'Third Box'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
   },
   {
-    lesson: 2,
-    section: 'introduction',
-    title: 'introduction to lesson two',
-    imgUrl: '',
-    convo: '',
-    newVocab: [],
-
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: 'Introduction',
+            firstBox: 'First Box',
+            secondBox: 'Second Box',
+            thirdBox: 'Third Box'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
   },
-]
+];
 
 const container = document.querySelector('.container');
+const links = document.querySelector('.dropdown-content')
 
 
 lessons.forEach(lesson => {
-  const slide = document.createElement('div');
-  slide.classList.add('slide');
-  container.appendChild(slide);
-  slide.classList.add('box');
-  slide.setAttribute('id', lessons.indexOf(lesson) )
-  const title =  document.createElement('h2');
-  title.textContent = lesson.title;
-  slide.appendChild(title);
-  const content = document.createElement('div')
-  slide.appendChild(content)
+  lesson.sections.forEach(section => {
+    section.slides.forEach(slide => {
+      const slideElement = document.createElement('div');
+      container.appendChild(slideElement);
+      slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
+      slideElement.classList.add('slide');
+      slideElement.classList.add('box');
+      const title =  document.createElement('h5');
+      title.textContent = slide.title;
+      slideElement.appendChild(title);
+      const first = document.createElement('h3')
+      slideElement.appendChild(first)
+      first.textContent = slide.firstBox
+      const sec = document.createElement('h4')
+      slideElement.appendChild(sec)
+      sec.textContent = slide.secondBox
+    })
+  })
 });
 
-const lessonOne = document.querySelector('.lesson-one');
-const slide1 = document.getElementById('1')
-const all = document.querySelectorAll('.box');
-
-function go(){
-  all.forEach(slee => {
-    slee.classList.remove("is-selected")
+lessons.forEach(lesson => {
+  lesson.sections.forEach(section => {
+    const link = document.createElement('a');
+    links.appendChild(link);
+    link.classList.add('link')
+    link.innerHTML = `${lesson.title} - ${section.title}`;
+    link.setAttribute('data-target', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}0`)
   })
-  slide1.classList.add("is-selected");
-  console.log(455555)
-}
-lessonOne.addEventListener('click', go)
+});
 
+
+
+    // Get all anchor tags with the class 'toggle-btn'
+    const toggleButtons = document.querySelectorAll('.link');
+
+    // Add click event listeners to each anchor tag
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Get the target div id from the data-target attribute
+        const targetDivId = this.getAttribute('data-target');
+
+        // Remove 'is-selected' class from all div elements
+        document.querySelectorAll('.box').forEach(div => {
+          div.classList.remove('is-selected');
+        });
+
+        // Add 'is-selected' class to the corresponding div
+        document.getElementById(targetDivId).classList.add('is-selected');
+        const dropbtn = document.querySelector('.dropbtn')
+        const isSelected = document.querySelector('.is-selected').children[0];
+        dropbtn.innerHTML = isSelected.textContent
+      });
+    });
 
 
 
@@ -61,9 +152,6 @@ let listLength = tile.length - 1;
 
 /* Set interface at page load */
 prevBtn.setAttribute("disabled", "");
-nextBtn.textContent = 'Start';
-
-let currentSlide = document.querySelector('.is-selected')
 
 
 // Counter from MDN Closures article; https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
@@ -116,7 +204,6 @@ function selectNext() {
     nextBtn.setAttribute("disabled", "");
   } else {
     prevBtn.removeAttribute("disabled");
-    nextBtn.textContent = 'Next';
   }
 }
 
@@ -142,7 +229,6 @@ function selectPrev() {
    */
   if (currentIndex - 1 <= 0) {
     prevBtn.setAttribute("disabled", "");
-    nextBtn.textContent = 'Start';
   } else {
     nextBtn.removeAttribute("disabled");
   }
@@ -152,3 +238,4 @@ function selectPrev() {
 // Event Listeners
 nextBtn.addEventListener("click", selectNext);
 prevBtn.addEventListener("click", selectPrev);
+
