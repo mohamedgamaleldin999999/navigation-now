@@ -6,10 +6,10 @@ const lessons = [
         title: 'Introduction',
         slides: [
           {
-            title: 'Introduction',
-            firstBox: 'First Box',
-            secondBox: 'Second Box',
-            thirdBox: 'Third Box'
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
           }
         ]
       },
@@ -42,34 +42,34 @@ const lessons = [
     title: 'Lesson Two',
     sections: [
       {
-        title: 'Introduction',
+        title: '4',
         slides: [
           {
-            title: 'Introduction',
-            firstBox: 'First Box',
-            secondBox: 'Second Box',
-            thirdBox: 'Third Box'
+            title: 'Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
           }
         ]
       },
       {
-        title: 'Story',
+        title: 'Story 2',
         slides: [
           {
-            title: '1',
-            firstBox: 'First Box img',
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
             secondBox: 'Second Box convo',
             thirdBox: 'Third Box vocab'
           },
           {
-            title: '2',
-            firstBox: 'First Box img',
-            secondBox: 'Second Box convo',
-            thirdBox: 'Third Box vocab'
-          },
-          {
-            title: '3',
-            firstBox: 'First Box img',
+            title: '7',
+            firstBox: 'First Box img99',
             secondBox: 'Second Box convo',
             thirdBox: 'Third Box vocab'
           },
@@ -142,100 +142,47 @@ lessons.forEach(lesson => {
 
 
 
-
-
-// Variables
-let nextBtn = document.querySelector(".next-btn");
-let prevBtn = document.querySelector(".prev-btn");
-let tile = document.querySelectorAll(".box");
-let listLength = tile.length - 1;
-
-/* Set interface at page load */
-prevBtn.setAttribute("disabled", "");
-
-
-// Counter from MDN Closures article; https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
-let count = (function() {
-  let privateCounter = 0;
-  function changeBy(val) {
-    privateCounter += val;
-  }
-
-  return {
-    countUp: function() {
-      changeBy(1);
-    },
-    countDown: function() {
-      changeBy(-1);
-    },
-    value: function() {
-      return privateCounter;
+    let currentSection = 0;
+    let sections = document.querySelectorAll(".box");
+    let sectionButtons = document.querySelectorAll(".box");
+    let nextButton = document.querySelector(".next-btn");
+    let previousButton = document.querySelector(".prev-btn");
+    for (let i = 0; i < sectionButtons.length; i++) {
+        sectionButtons[i].addEventListener("click", function() {
+            sections[currentSection].classList.remove("is-selected");
+            sectionButtons[currentSection].classList.remove("is-selected");
+            sections[currentSection = i].classList.add("is-selected");
+            sectionButtons[currentSection].classList.add("is-selected");
+            if (i === 0) {
+                if (previousButton.className.split(" ").indexOf("disable") < 0) {
+                    previousButton.classList.add("disable");
+                }
+            } else {
+                if (previousButton.className.split(" ").indexOf("disable") >= 0) {
+                    previousButton.classList.remove("disable");
+                }
+            }
+            if (i === sectionButtons.length - 1) {
+                if (nextButton.className.split(" ").indexOf("disable") < 0) {
+                    nextButton.classList.add("disable");
+                }
+            } else {
+                if (nextButton.className.split(" ").indexOf("disable") >= 0) {
+                    nextButton.classList.remove("disable");
+                }
+            }
+        });
     }
-  };
-})();
-
-
-function selectNext() {
-  let currentIndex = count.value();
-
-  currentIndex = currentIndex + 1;
-
-  //console.log(tile.length);
-
-  /* Increment count value */
-  count.countUp();
-
-  //console.log(currentIndex);
-  //console.log(listLength);
-
-  /* Add highlighting to the next tile */
-  if (tile[currentIndex] !== undefined) {
-    tile[currentIndex].classList.add("is-selected");
-  }
-
-  /* Remove from previous tile */
-  if (tile[currentIndex - 1] !== undefined) {
-    tile[currentIndex - 1].classList.remove("is-selected");
-  }
-
-  /* Set next image button to disabled if we are on the last tile;
-   * set previous button to enabled */
-  if (currentIndex === listLength) {
-    nextBtn.setAttribute("disabled", "");
-  } else {
-    prevBtn.removeAttribute("disabled");
-  }
-}
-
-
-function selectPrev() {
-  let currentIndex = count.value();
-
-  /* Decrement count value */
-  count.countDown();
-
-  /* Add highlighting to previous tile */
-  if (currentIndex > 0 && tile[currentIndex - 1] !== undefined) {
-    tile[currentIndex - 1].classList.add("is-selected");
-  }
-
-  /* Remove from current tile */
-  if (tile[currentIndex] !== undefined) {
-    tile[currentIndex].classList.remove("is-selected");
-  }
-
-  /* Set previous image button to disabled if we are on the first image tile;
-   * set next button to enabled
-   */
-  if (currentIndex - 1 <= 0) {
-    prevBtn.setAttribute("disabled", "");
-  } else {
-    nextBtn.removeAttribute("disabled");
-  }
-}
-
-
-// Event Listeners
-nextBtn.addEventListener("click", selectNext);
-prevBtn.addEventListener("click", selectPrev);
+    
+    nextButton.addEventListener("click", function() {
+        if (currentSection < sectionButtons.length - 1) {
+            sectionButtons[currentSection + 1].click();
+        }
+    });
+    
+    previousButton.addEventListener("click", function() {
+        if (currentSection > 0) {
+            sectionButtons[currentSection - 1].click();
+        }
+    });
 
