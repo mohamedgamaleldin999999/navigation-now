@@ -90,7 +90,6 @@ lessons.forEach(lesson => {
       container.appendChild(slideElement);
       slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
       slideElement.classList.add('slide');
-      slideElement.classList.add('box');
       const title =  document.createElement('h5');
       title.textContent = slide.title;
       slideElement.appendChild(title);
@@ -129,7 +128,7 @@ let currentSection = 0;
         const targetDivId = this.getAttribute('data-target');
 
         // Remove 'is-selected' class from all div elements
-        document.querySelectorAll('.box').forEach(div => {
+        document.querySelectorAll('.slide').forEach(div => {
           div.classList.remove('is-selected');
         });
 
@@ -138,19 +137,19 @@ let currentSection = 0;
         const dropbtn = document.querySelector('.dropbtn')
         const isSelected = document.querySelector('.is-selected');
         dropbtn.innerHTML = isSelected.textContent
-        const nodeList = document.querySelectorAll('.box');
+        const nodeList = document.querySelectorAll('.slide');
 
 // Convert NodeList to an array
-const allBoxes = Array.from(nodeList);
+const allSlides = Array.from(nodeList);
 
-        currentSection = allBoxes.indexOf(isSelected)
+        currentSection = allSlides.indexOf(isSelected)
         console.log(currentSection)
       });
     });
 
 
-    let sections = document.querySelectorAll(".box");
-    let sectionButtons = document.querySelectorAll(".box");
+    let sections = document.querySelectorAll(".slide");
+    let sectionButtons = document.querySelectorAll(".slide");
     let nextButton = document.querySelector(".next-btn");
     let previousButton = document.querySelector(".prev-btn");
     for (let i = 0; i < sectionButtons.length; i++) {
@@ -183,7 +182,7 @@ const allBoxes = Array.from(nodeList);
     nextButton.addEventListener("click", function() {
         if (currentSection < sectionButtons.length - 1) {
           // Remove 'is-selected' class from all div elements
-        document.querySelectorAll('.box').forEach(div => {
+        document.querySelectorAll('.slide').forEach(div => {
           div.classList.remove('is-selected');
         });
             sectionButtons[currentSection + 1].click();
@@ -193,7 +192,7 @@ const allBoxes = Array.from(nodeList);
     previousButton.addEventListener("click", function() {
         if (currentSection > 0) {
           // Remove 'is-selected' class from all div elements
-        document.querySelectorAll('.box').forEach(div => {
+        document.querySelectorAll('.slide').forEach(div => {
           div.classList.remove('is-selected');
         });
             sectionButtons[currentSection - 1].click();
