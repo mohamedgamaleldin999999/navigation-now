@@ -786,6 +786,25 @@ const links = document.querySelector('.dropdown-content');
 let activeLesson = null;
 let activeLink = null;
 const dropdownBtn = document.querySelector('.dropbtn');
+// Get the dropdown element
+const dropdown = document.querySelector('.dropdown');
+
+// Add a click event listener to the document
+document.addEventListener('click', function (event) {
+  const isClickInsideDropdown = dropdown.contains(event.target);
+
+  // Check if the clicked element is inside the dropdown
+  if (!isClickInsideDropdown) {
+    // Remove the active class from the dropdown
+    links.classList.remove('active');
+  }
+});
+
+// Prevent the dropdown from closing when clicking inside it
+dropdown.addEventListener('click', function (event) {
+  event.stopPropagation();
+});
+
 
 // Add a click event listener to the dropdown to toggle the 'active' class
 dropdownBtn.addEventListener('click', function () {
