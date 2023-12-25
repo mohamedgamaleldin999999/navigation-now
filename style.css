@@ -117,6 +117,7 @@
 
 .dropdown-lesson {
   display: none;
+  transition: max-height 3s ease-in-out;
 }
 
 .active-lesson {

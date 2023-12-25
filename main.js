@@ -783,6 +783,7 @@ const lessons = [
 
 const container = document.querySelector('.container');
 const links = document.querySelector('.dropdown-content');
+let activeLesson = null;
 
 
 lessons.forEach(lesson => {
@@ -822,7 +823,11 @@ lessons.forEach(lesson => {
   })
   lessonLink.addEventListener('click', function (event) {
     event.preventDefault();
+    if (activeLesson !== null && activeLesson !== dropdownLesson) {
+      activeLesson.classList.remove('active-lesson');
+    }
     dropdownLesson.classList.toggle('active-lesson');
+    activeLesson = dropdownLesson.classList.contains('active-lesson') ? dropdownLesson : null;
   });
 });
 
@@ -857,7 +862,6 @@ let currentSection = 0;
 const allSlides = Array.from(nodeList);
 
         currentSection = allSlides.indexOf(isSelected)
-        console.log(currentSection)
       });
     });
 
