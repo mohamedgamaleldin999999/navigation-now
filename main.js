@@ -45,7 +45,7 @@ const lessons = [
         title: '4',
         slides: [
           {
-            title: 'Introduction 2',
+            title: '4 Introduction 2',
             firstBox: 'First Box 2',
             secondBox: 'Second Box 2',
             thirdBox: 'Third Box 2'
@@ -114,6 +114,7 @@ lessons.forEach(lesson => {
   })
 });
 
+let currentSection = 0;
 
 
     // Get all anchor tags with the class 'toggle-btn'
@@ -135,14 +136,19 @@ lessons.forEach(lesson => {
         // Add 'is-selected' class to the corresponding div
         document.getElementById(targetDivId).classList.add('is-selected');
         const dropbtn = document.querySelector('.dropbtn')
-        const isSelected = document.querySelector('.is-selected').children[0];
+        const isSelected = document.querySelector('.is-selected');
         dropbtn.innerHTML = isSelected.textContent
+        const nodeList = document.querySelectorAll('.box');
+
+// Convert NodeList to an array
+const allBoxes = Array.from(nodeList);
+
+        currentSection = allBoxes.indexOf(isSelected)
+        console.log(currentSection)
       });
     });
 
 
-
-    let currentSection = 0;
     let sections = document.querySelectorAll(".box");
     let sectionButtons = document.querySelectorAll(".box");
     let nextButton = document.querySelector(".next-btn");
@@ -176,12 +182,20 @@ lessons.forEach(lesson => {
     
     nextButton.addEventListener("click", function() {
         if (currentSection < sectionButtons.length - 1) {
+          // Remove 'is-selected' class from all div elements
+        document.querySelectorAll('.box').forEach(div => {
+          div.classList.remove('is-selected');
+        });
             sectionButtons[currentSection + 1].click();
         }
     });
     
     previousButton.addEventListener("click", function() {
         if (currentSection > 0) {
+          // Remove 'is-selected' class from all div elements
+        document.querySelectorAll('.box').forEach(div => {
+          div.classList.remove('is-selected');
+        });
             sectionButtons[currentSection - 1].click();
         }
     });
