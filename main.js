@@ -77,10 +77,712 @@ const lessons = [
       },
     ]
   },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson One',
+    sections: [
+      {
+        title: 'Introduction',
+        slides: [
+          {
+            title: '0',
+            firstBox: 'intro 1',
+            secondBox: 'wow lesson',
+            thirdBox: 'please start'
+          }
+        ]
+      },
+      {
+        title: 'Story',
+        slides: [
+          {
+            title: '1',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '2',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '3',
+            firstBox: 'First Box img',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
+  {
+    title: 'Lesson Two',
+    sections: [
+      {
+        title: '4',
+        slides: [
+          {
+            title: '4 Introduction 2',
+            firstBox: 'First Box 2',
+            secondBox: 'Second Box 2',
+            thirdBox: 'Third Box 2'
+          }
+        ]
+      },
+      {
+        title: 'Story 2',
+        slides: [
+          {
+            title: '5',
+            firstBox: 'First Box img 212',
+            secondBox: 'Second Box convo 22',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '6',
+            firstBox: 'First Box img 55',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+          {
+            title: '7',
+            firstBox: 'First Box img99',
+            secondBox: 'Second Box convo',
+            thirdBox: 'Third Box vocab'
+          },
+        ]
+      },
+    ]
+  },
 ];
 
 const container = document.querySelector('.container');
-const links = document.querySelector('.dropdown-content')
+const links = document.querySelector('.dropdown-content');
 
 
 lessons.forEach(lesson => {
@@ -104,13 +806,24 @@ lessons.forEach(lesson => {
 });
 
 lessons.forEach(lesson => {
+  const lessonLink = document.createElement('button');
+  links.appendChild(lessonLink);
+  lessonLink.classList.add('lesson-link');
+  lessonLink.innerHTML = lesson.title;
+  const dropdownLesson = document.createElement('div');
+  links.appendChild(dropdownLesson);
+  dropdownLesson.classList.add('dropdown-lesson');
   lesson.sections.forEach(section => {
     const link = document.createElement('a');
-    links.appendChild(link);
+    dropdownLesson.appendChild(link);
     link.classList.add('link')
     link.innerHTML = `${lesson.title} - ${section.title}`;
     link.setAttribute('data-target', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}0`)
   })
+  lessonLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    dropdownLesson.classList.toggle('active-lesson');
+  });
 });
 
 let currentSection = 0;
@@ -136,7 +849,8 @@ let currentSection = 0;
         document.getElementById(targetDivId).classList.add('is-selected');
         const dropbtn = document.querySelector('.dropbtn')
         const isSelected = document.querySelector('.is-selected');
-        dropbtn.innerHTML = isSelected.textContent
+        const selectedTitle = isSelected.children[0];
+        dropbtn.innerHTML = selectedTitle.textContent
         const nodeList = document.querySelectorAll('.slide');
 
 // Convert NodeList to an array

@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 }
 
+.controls {
+  display: flex;
+}
+
 .slide {
   align-items: center;
   background-color: LightGray;
@@ -55,12 +59,14 @@
 
 /* The dropdown container */
 .dropdown {
-  float: right;
-  overflow: hidden;
+  background-color: aquamarine;
+  display: flex;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
+  display: flex;
+  flex-direction: row;
   font-size: 16px;
   border: none;
   outline: none;
@@ -78,12 +84,15 @@
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
+  flex-direction: column;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  max-height: 50%;
+  overflow: auto;
 }
 
 /* Links inside the dropdown */
@@ -103,5 +112,13 @@
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-lesson {
+  display: none;
+}
+
+.active-lesson {
   display: block;
 }
