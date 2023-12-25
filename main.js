@@ -784,6 +784,14 @@ const lessons = [
 const container = document.querySelector('.container');
 const links = document.querySelector('.dropdown-content');
 let activeLesson = null;
+let activeLink = null;
+const dropdownBtn = document.querySelector('.dropbtn');
+
+// Add a click event listener to the dropdown to toggle the 'active' class
+dropdownBtn.addEventListener('click', function () {
+  // Toggle the 'active' class on the dropdown
+  links.classList.add('active');
+});
 
 
 lessons.forEach(lesson => {
@@ -857,11 +865,16 @@ let currentSection = 0;
         const selectedTitle = isSelected.children[0];
         dropbtn.innerHTML = selectedTitle.textContent
         const nodeList = document.querySelectorAll('.slide');
-
-// Convert NodeList to an array
-const allSlides = Array.from(nodeList);
+        if (activeLink !== null && activeLink !== button) {
+          activeLink.classList.remove('selected');
+        }
+        this.classList.add('selected')
+        activeLink = button.classList.contains('selected') ? button : null;
+        // Convert NodeList to an array
+        const allSlides = Array.from(nodeList);
 
         currentSection = allSlides.indexOf(isSelected)
+        links.classList.remove('active');
       });
     });
 

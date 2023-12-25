@@ -111,9 +111,7 @@
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: flex;
-}
+
 
 .dropdown-lesson {
   display: none;
@@ -122,4 +120,16 @@
 
 .active-lesson {
   display: block;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.active {
+  display: flex;
+}
+
+.selected {
+  background-color: aqua;
 }
