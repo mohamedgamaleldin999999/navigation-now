@@ -820,8 +820,9 @@ lessons.forEach(lesson => {
       slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
       slideElement.classList.add('slide');
       const title =  document.createElement('h5');
-      title.textContent = slide.title;
       slideElement.appendChild(title);
+      title.textContent = slide.title;
+      title.classList.add('slide-title');
       const first = document.createElement('h3')
       slideElement.appendChild(first)
       first.textContent = slide.firstBox
@@ -878,10 +879,8 @@ let currentSection = 0;
 
         // Add 'is-selected' class to the corresponding div
         document.getElementById(targetDivId).classList.add('is-selected');
-        const dropbtn = document.querySelector('.dropbtn')
         const isSelected = document.querySelector('.is-selected');
-        const selectedTitle = isSelected.children[0];
-        dropbtn.innerHTML = selectedTitle.textContent
+        dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
         const nodeList = document.querySelectorAll('.slide');
         // Convert NodeList to an array
         const allSlides = Array.from(nodeList);
@@ -936,6 +935,8 @@ let currentSection = 0;
         });
             sectionButtons[currentSection + 1].click();
         }
+        const isSelected = document.querySelector('.is-selected');
+        dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
     });
     
     previousButton.addEventListener("click", function() {
@@ -946,5 +947,7 @@ let currentSection = 0;
         });
             sectionButtons[currentSection - 1].click();
         }
+        const isSelected = document.querySelector('.is-selected');
+        dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
     });
 
