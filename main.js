@@ -784,7 +784,6 @@ const lessons = [
 const container = document.querySelector('.container');
 const links = document.querySelector('.dropdown-content');
 let activeLesson = null;
-let activeLink = null;
 const dropdownBtn = document.querySelector('.dropbtn');
 // Get the dropdown element
 const dropdown = document.querySelector('.dropdown');
@@ -884,16 +883,17 @@ let currentSection = 0;
         const selectedTitle = isSelected.children[0];
         dropbtn.innerHTML = selectedTitle.textContent
         const nodeList = document.querySelectorAll('.slide');
-        if (activeLink !== null && activeLink !== button) {
-          activeLink.classList.remove('selected');
-        }
-        this.classList.add('selected')
-        activeLink = button.classList.contains('selected') ? button : null;
         // Convert NodeList to an array
         const allSlides = Array.from(nodeList);
 
         currentSection = allSlides.indexOf(isSelected)
         links.classList.remove('active');
+        const dropdownLesson = document.querySelector('.dropdown-lesson');
+        if (activeLesson !== null && activeLesson !== dropdownLesson) {
+          activeLesson.classList.remove('active-lesson');
+        }
+        activeLesson = dropdownLesson.classList.contains('active-lesson') ? dropdownLesson : null;
+        console.log(dropdownLesson)
       });
     });
 
