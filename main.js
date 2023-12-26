@@ -893,7 +893,6 @@ let currentSection = 0;
           activeLesson.classList.remove('active-lesson');
         }
         activeLesson = dropdownLesson.classList.contains('active-lesson') ? dropdownLesson : null;
-        console.log(dropdownLesson)
       });
     });
 
