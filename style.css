@@ -1,6 +1,8 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  height: 90vh;
+  width: 100%;
 }
 
 .controlsContainer {
@@ -24,14 +26,12 @@
 .slide {
   align-items: center;
   background-color: LightGray;
-  border: 2px solid DarkGray;
   display: flex;
   font-size: 2em;
-  height: 240px;
+  height: 100%;
   justify-content: center;
-  margin: 0.5em;
   text-align: center;
-  width: 240px;
+  width: 100%;
   display: none;
 }
 
@@ -153,4 +153,76 @@
 
 .selected {
   background-color: aqua;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+}
+
+.story-img {
+  width: 40%;
+  border-radius: 8px;
+  min-width: 400px;
+}
+
+.convo-div {
+  margin: 30px;
+}
+
+h6 {
+  margin: 10px;
+  font-size: 0.6em;
+}
+
+.convo-box {
+  margin: 10px;
+  font-size: 2em;
+}
+
+.vocab-big-div {
+  margin-top: 50px;
+}
+
+.vocab-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vocab-box {
+  padding: 10px;
+  background-color: aqua;
+  margin: 5px;
+  border-radius: 16px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .story-img {
+    width: 100%;
+    border-radius: 8px;
+    min-width: 100%;
+  }
+
+  .convo-div {
+    margin: 10px;
+  }
+
+  h6 {
+    margin: 5px;
+    font-size: 0.5em;
+  }
+
+  .convo-box {
+    font-size: 1.2em;
+  }
+
+  .vocab-big-div {
+    margin-top: 10px;
+  }
+
+  .vocab-box {
+    font-size: 0.6em;
+  }
 }

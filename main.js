@@ -1,6 +1,7 @@
 import lessons from "./modules/lessons.js";
+import { createAnElement } from "./modules/utilties.js";
 
-console.log(lessons)
+
 const container = document.querySelector('.container');
 const links = document.querySelector('.dropdown-content');
 let activeLesson = null;
@@ -35,20 +36,28 @@ dropdownBtn.addEventListener('click', function () {
 lessons.forEach(lesson => {
   lesson.sections.forEach(section => {
     section.slides.forEach(slide => {
-      const slideElement = document.createElement('div');
-      container.appendChild(slideElement);
+      const slideElement = createAnElement('div', container, 'slide');
       slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
-      slideElement.classList.add('slide');
-      const title =  document.createElement('h5');
-      slideElement.appendChild(title);
-      title.textContent = slide.title;
-      title.classList.add('slide-title');
-      const first = document.createElement('h3')
-      slideElement.appendChild(first)
-      first.textContent = slide.firstBox
-      const sec = document.createElement('h4')
-      slideElement.appendChild(sec)
-      sec.textContent = slide.secondBox
+
+      const slideTitle = createAnElement('p', slideElement, 'slide-title');
+      const mainDiv = createAnElement('div', slideElement, 'main-div');
+
+      const img = createAnElement('img', mainDiv, 'story-img');
+      img.setAttribute('src', slide.imgURl);
+
+      const convoDiv = createAnElement('div', slideElement, 'convo-div');
+      const convoTitle = createAnElement('h6', convoDiv, 'convo-title', slide.speaker);
+      const Sentences = createAnElement('div', convoDiv, 'sentences');
+      const convoBox = createAnElement('p', Sentences, 'convo-box', slide.convo);
+
+      const vocabBigDiv = createAnElement('div', slideElement, 'vocab-big-div');
+      const vocabTitle = createAnElement('h6', vocabBigDiv, 'vocab-title', 'New Vocabulary');
+      const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
+      const vocabArray = slide.vocab
+      for (let i = 0; i< vocabArray.length; i++){
+        createAnElement('p', vocabDiv, 'vocab-box', vocabArray[i])
+      }
+
     })
   })
 });
