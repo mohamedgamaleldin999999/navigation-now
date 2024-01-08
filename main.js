@@ -1,21 +1,18 @@
 import lessons from "./modules/lessons.js";
-import { createAnElement } from "./modules/utilties.js";
+import { createAnElement, playSound } from "./modules/utilties.js";
 
 
 const container = document.querySelector('.container');
 const links = document.querySelector('.dropdown-content');
 let activeLesson = null;
 const dropdownBtn = document.querySelector('.dropbtn');
-// Get the dropdown element
 const dropdown = document.querySelector('.dropdown');
+
 
 // Add a click event listener to the document
 document.addEventListener('click', function (event) {
   const isClickInsideDropdown = dropdown.contains(event.target);
-
-  // Check if the clicked element is inside the dropdown
   if (!isClickInsideDropdown) {
-    // Remove the active class from the dropdown
     links.classList.remove('active');
   }
 });
@@ -28,7 +25,6 @@ dropdown.addEventListener('click', function (event) {
 
 // Add a click event listener to the dropdown to toggle the 'active' class
 dropdownBtn.addEventListener('click', function () {
-  // Toggle the 'active' class on the dropdown
   links.classList.add('active');
 });
 
@@ -38,7 +34,6 @@ lessons.forEach(lesson => {
     section.slides.forEach(slide => {
       const slideElement = createAnElement('div', container, 'slide');
       slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
-
       const slideTitle = createAnElement('p', slideElement, 'slide-title');
       const mainDiv = createAnElement('div', slideElement, 'main-div');
 
@@ -50,31 +45,27 @@ lessons.forEach(lesson => {
       const Sentences = createAnElement('div', convoDiv, 'sentences');
       const convoBox = createAnElement('p', Sentences, 'convo-box', slide.convo);
 
-      const vocabBigDiv = createAnElement('div', slideElement, 'vocab-big-div');
-      const vocabTitle = createAnElement('h6', vocabBigDiv, 'vocab-title', 'New Vocabulary');
-      const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
-      const vocabArray = slide.vocab
-      for (let i = 0; i< vocabArray.length; i++){
-        createAnElement('p', vocabDiv, 'vocab-box', vocabArray[i])
+      if(slide.vocab){
+        const vocabBigDiv = createAnElement('div', slideElement, 'vocab-big-div');
+        const vocabTitle = createAnElement('h6', vocabBigDiv, 'vocab-title', 'New Vocabulary');
+        const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
+        const vocabArray = slide.vocab
+        for (let i = 0; i< vocabArray.length; i++){
+          const vocabItem = createAnElement('p', vocabDiv, 'vocab-box', vocabArray[i].word);
+          vocabItem.onclick = function(){
+            playSound(vocabArray[i].url)
+          };
+        }  
       }
-
     })
   })
 });
 
 lessons.forEach(lesson => {
-  const lessonLink = document.createElement('button');
-  links.appendChild(lessonLink);
-  lessonLink.classList.add('lesson-link');
-  lessonLink.innerHTML = lesson.title;
-  const dropdownLesson = document.createElement('div');
-  links.appendChild(dropdownLesson);
-  dropdownLesson.classList.add('dropdown-lesson');
+  const lessonLink = createAnElement('button', links, 'lesson-link', lesson.title);
+  const dropdownLesson = createAnElement('div', links, 'dropdown-lesson',);
   lesson.sections.forEach(section => {
-    const link = document.createElement('a');
-    dropdownLesson.appendChild(link);
-    link.classList.add('link')
-    link.innerHTML = `${lesson.title} - ${section.title}`;
+    const link = createAnElement('a', dropdownLesson, 'link', section.title);
     link.setAttribute('data-target', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}0`)
   })
   lessonLink.addEventListener('click', function (event) {
