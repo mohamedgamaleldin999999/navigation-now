@@ -34,7 +34,7 @@ lessons.forEach(lesson => {
     section.slides.forEach(slide => {
       const slideElement = createAnElement('div', container, 'slide');
       slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
-      const slideTitle = createAnElement('p', slideElement, 'slide-title');
+      const slideTitle = createAnElement('h6', slideElement, 'slide-title', section.title);
       const mainDiv = createAnElement('div', slideElement, 'main-div');
 
       const img = createAnElement('img', mainDiv, 'story-img');
@@ -62,7 +62,7 @@ lessons.forEach(lesson => {
 });
 
 lessons.forEach(lesson => {
-  const lessonLink = createAnElement('button', links, 'lesson-link', lesson.title);
+  const lessonLink = createAnElement('button', links, 'lesson-link', `${lessons.indexOf(lesson)+1} - ${lesson.title}`);
   const dropdownLesson = createAnElement('div', links, 'dropdown-lesson',);
   lesson.sections.forEach(section => {
     const link = createAnElement('a', dropdownLesson, 'link', section.title);
@@ -98,34 +98,37 @@ let currentSection = 0;
         });
 
         // Add 'is-selected' class to the corresponding div
-        document.getElementById(targetDivId).classList.add('is-selected');
-        const isSelected = document.querySelector('.is-selected');
-        dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
-        const nodeList = document.querySelectorAll('.slide');
-        // Convert NodeList to an array
-        const allSlides = Array.from(nodeList);
-
-        currentSection = allSlides.indexOf(isSelected)
-        links.classList.remove('active');
-        const dropdownLesson = document.querySelector('.dropdown-lesson');
-        if (activeLesson !== null && activeLesson !== dropdownLesson) {
-          activeLesson.classList.remove('active-lesson');
+        if(document.getElementById(targetDivId)){
+          document.getElementById(targetDivId).classList.add('is-selected');
         }
-        activeLesson = dropdownLesson.classList.contains('active-lesson') ? dropdownLesson : null;
+        if(document.querySelector('.is-selected')){
+          const isSelected = document.querySelector('.is-selected');
+          dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
+          const nodeList = document.querySelectorAll('.slide');
+          // Convert NodeList to an array
+          const allSlides = Array.from(nodeList);
+  
+          currentSection = allSlides.indexOf(isSelected)
+          links.classList.remove('active');
+          const dropdownLesson = document.querySelector('.dropdown-lesson');
+          if (activeLesson !== null && activeLesson !== dropdownLesson) {
+            activeLesson.classList.remove('active-lesson');
+          }
+          activeLesson = dropdownLesson.classList.contains('active-lesson') ? dropdownLesson : null;  
+        }
       });
     });
 
 
     let sections = document.querySelectorAll(".slide");
-    let sectionButtons = document.querySelectorAll(".slide");
     let nextButton = document.querySelector(".next-btn");
     let previousButton = document.querySelector(".prev-btn");
-    for (let i = 0; i < sectionButtons.length; i++) {
-        sectionButtons[i].addEventListener("click", function() {
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].addEventListener("click", function() {
             sections[currentSection].classList.remove("is-selected");
-            sectionButtons[currentSection].classList.remove("is-selected");
+            sections[currentSection].classList.remove("is-selected");
             sections[currentSection = i].classList.add("is-selected");
-            sectionButtons[currentSection].classList.add("is-selected");
+            sections[currentSection].classList.add("is-selected");
             if (i === 0) {
                 if (previousButton.className.split(" ").indexOf("disable") < 0) {
                     previousButton.classList.add("disable");
@@ -135,7 +138,7 @@ let currentSection = 0;
                     previousButton.classList.remove("disable");
                 }
             }
-            if (i === sectionButtons.length - 1) {
+            if (i === sections.length - 1) {
                 if (nextButton.className.split(" ").indexOf("disable") < 0) {
                     nextButton.classList.add("disable");
                 }
@@ -148,26 +151,30 @@ let currentSection = 0;
     }
     
     nextButton.addEventListener("click", function() {
-        if (currentSection < sectionButtons.length - 1) {
+        if (currentSection < sections.length - 1) {
           // Remove 'is-selected' class from all div elements
         document.querySelectorAll('.slide').forEach(div => {
           div.classList.remove('is-selected');
         });
-            sectionButtons[currentSection + 1].click();
+            sections[currentSection + 1].click();
+            const isSelected = document.querySelector('.is-selected');
+            dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;    
         }
-        const isSelected = document.querySelector('.is-selected');
-        dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
     });
     
-    previousButton.addEventListener("click", function() {
-        if (currentSection > 0) {
-          // Remove 'is-selected' class from all div elements
-        document.querySelectorAll('.slide').forEach(div => {
-          div.classList.remove('is-selected');
-        });
-            sectionButtons[currentSection - 1].click();
-        }
-        const isSelected = document.querySelector('.is-selected');
-        dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
+previousButton.addEventListener("click", function() {
+  if (currentSection > 0) {
+    // Remove 'is-selected' class from all div elements
+    document.querySelectorAll('.slide').forEach(div => {
+      div.classList.remove('is-selected');
     });
+    sections[currentSection - 1].click();
+    const isSelected = document.querySelector('.is-selected');
+    if(isSelected.querySelector('.slide-title')){
+      dropdownBtn.innerHTML = isSelected.querySelector('.slide-title').textContent;
+    }else{
+      dropdownBtn.innerHTML = ''
+    }
+  }
+});
 
