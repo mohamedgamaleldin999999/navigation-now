@@ -34,7 +34,10 @@ lessons.forEach(lesson => {
     section.slides.forEach(slide => {
       const slideElement = createAnElement('div', container, 'slide');
       slideElement.setAttribute('id', `${lessons.indexOf(lesson)}${lesson.sections.indexOf(section)}${section.slides.indexOf(slide)}`)
-      const slideTitle = createAnElement('h6', slideElement, 'slide-title', section.title);
+      
+      const slideTitle = createAnElement('h6', slideElement, 'slide-title', `${lessons.indexOf(lesson)+1} - ${lesson.chapter} <br> ${lesson.title} > ${section.title}`);
+      slideTitle.classList.add('display-none');
+      
       const mainDiv = createAnElement('div', slideElement, 'main-div');
 
       const img = createAnElement('img', mainDiv, 'story-img');
@@ -45,9 +48,17 @@ lessons.forEach(lesson => {
       const Sentences = createAnElement('div', convoDiv, 'sentences');
       const convoBox = createAnElement('p', Sentences, 'convo-box', slide.convo);
 
+      if (slide.hasOwnProperty('intro')) {
+        const description = createAnElement('p', slideElement, 'description', slide.description);
+        img.classList.add('intro-img');
+      }
+
       if(slide.vocab){
         const vocabBigDiv = createAnElement('div', slideElement, 'vocab-big-div');
         const vocabTitle = createAnElement('h6', vocabBigDiv, 'vocab-title', 'New Vocabulary');
+        if (slide.hasOwnProperty('intro')){
+          vocabTitle.classList.add('display-none');
+        }
         const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
         const vocabArray = slide.vocab
         for (let i = 0; i< vocabArray.length; i++){
@@ -62,7 +73,7 @@ lessons.forEach(lesson => {
 });
 
 lessons.forEach(lesson => {
-  const lessonLink = createAnElement('button', links, 'lesson-link', `${lessons.indexOf(lesson)+1} - ${lesson.title}`);
+  const lessonLink = createAnElement('button', links, 'lesson-link', `${lessons.indexOf(lesson)+1} - ${lesson.chapter} - ${lesson.title}`);
   const dropdownLesson = createAnElement('div', links, 'dropdown-lesson',);
   lesson.sections.forEach(section => {
     const link = createAnElement('a', dropdownLesson, 'link', section.title);
