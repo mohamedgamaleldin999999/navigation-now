@@ -195,6 +195,14 @@ h6 {
   font-size: 0.9em;
   background-color: #f0f0f0;
   border: 3px solid #ddd;
+  text-decoration: line-through;
+  text-decoration-thickness: 15px;
+}
+
+.vocab-box:hover{
+  border: solid white;
+  text-decoration: none;
+  transition: ease 0.5s;
 }
 
 .description {
