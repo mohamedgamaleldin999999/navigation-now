@@ -1,5 +1,8 @@
 import lessons from "./modules/lessons.js";
 import { createAnElement, playSound } from "./modules/utilties.js";
+import { lesson001Vocab } from "./modules/lessons/lesson-001/lesson-001.js";
+
+console.log(lesson001Vocab)
 
 
 const container = document.querySelector('.container');
@@ -62,7 +65,7 @@ lessons.forEach(lesson => {
         const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
         const vocabArray = slide.vocab
         for (let i = 0; i< vocabArray.length; i++){
-          const vocabItem = createAnElement('p', vocabDiv, 'vocab-box', vocabArray[i].word);
+          const vocabItem = createAnElement('p', vocabDiv, 'vocab-box', `${vocabArray[i].meaning} : ${vocabArray[i].word}`);
           vocabItem.onclick = function(){
             playSound(vocabArray[i].url)
           };

@@ -43,10 +43,10 @@ export const lesson001 = {
           convo: 'صباح الخير أستاذة ندى، ازيك؟',
           speaker: audiobook,
           vocab: [
-            {word: 'morning : صباح', url: '/audio1970771774_01.mp3'},
-            {word: 'good : الخير', url: '/audio1970771774_02.mp3'},
-            {word: 'Ms : أستاذة', url: '/audio1970771774_03.mp3'},
-            {word: 'how are you? (f) : ازيك؟', url: '/audio1970771774_04.mp3'},
+            {word: 'صباح', meaning: 'morning', url: '/audio1970771774_01.mp3'},
+            {word: 'الخير', meaning: 'good', url: '/audio1970771774_01.mp3'},
+            {word: 'أستاذة', meaning: 'Ms', url: '/audio1970771774_01.mp3'},
+            {word: 'ازيك؟', meaning: 'how are you? (f)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -54,12 +54,12 @@ export const lesson001 = {
           convo: 'صباح النور أستاذ أحمد. الحمد لله بخير انت ازيك؟',
           speaker: audiobook,
           vocab: [
-            {word: 'light : النور', url: '/audio1970771774_01.mp3'},
-            {word: 'Mr : أستاذ', url: '/audio1970771774_01.mp3'},
-            {word: 'thank god : الحمد لله', url: '/audio1970771774_01.mp3'},
-            {word: 'fine : بخير', url: '/audio1970771774_01.mp3'},
-            {word: 'you (f) : انت', url: '/audio1970771774_01.mp3'},
-            {word: 'how are you (m) : ازيك؟', url: '/audio1970771774_01.mp3'},                 
+            {word: 'النور', meaning: 'light', url: '/audio1970771774_01.mp3'},
+            {word: 'أستاذ', meaning: 'Mr', url: '/audio1970771774_01.mp3'},
+            {word: 'الحمد لله', meaning: 'thank god', url: '/audio1970771774_01.mp3'},
+            {word: 'بخير', meaning: 'fine', url: '/audio1970771774_01.mp3'},
+            {word: 'انت', meaning: 'you (m)', url: '/audio1970771774_01.mp3'},
+            {word: 'ازيك؟', meaning: 'how are you (m)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -67,7 +67,7 @@ export const lesson001 = {
           convo: 'مساء الخير أستاذة رضوى',
           speaker: audiobook,
           vocab: [
-            {word: 'evening : مساء', url: '/audio1970771774_01.mp3'},
+            {word: 'مساء', meaning: 'evening', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -75,7 +75,7 @@ export const lesson001 = {
           convo: 'مساء النور أستاذ طارق. عامل ايه؟',
           speaker: audiobook,
           vocab: [
-            {word: 'how are you (m) : عامل ايه', url: '/audio1970771774_01.mp3'},
+            {word: 'عامل ايه', meaning: 'how are you (m)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -83,8 +83,10 @@ export const lesson001 = {
           convo: 'كويس جدا الحمد لله. انتي عاملة ايه؟',
           speaker: audiobook,
           vocab: [
-            {word: 'how are you (f) : عاملة ايه', url: '/audio1970771774_01.mp3'},
-            {word: 'you (f) : انتي', url: '/audio1970771774_01.mp3'},
+            {word: 'عاملة ايه', meaning: 'how are you (f)', url: '/audio1970771774_01.mp3'},
+            {word: 'انتي', meaning: 'you (f)', url: '/audio1970771774_01.mp3'},
+            {word: 'كويس', meaning: 'good', url: '/audio1970771774_01.mp3'},
+            {word: 'جدا', meaning: 'very', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -92,9 +94,10 @@ export const lesson001 = {
           convo: 'ايه يا صاحبي ايه الاخبار؟',
           speaker: audiobook,
           vocab: [
-            {word: 'how are you (f) :ايه', url: '/audio1970771774_01.mp3'},
-            {word: 'you (f) : يا', url: '/audio1970771774_01.mp3'},
-            {word: 'you (f) : صاحبي', url: '/audio1970771774_01.mp3'},
+            {word: 'ايه', meaning: 'what', url: '/audio1970771774_01.mp3'},
+            {word: 'يا', meaning: 'hey', url: '/audio1970771774_01.mp3'},
+            {word: 'صاحب', meaning: 'friend', url: '/audio1970771774_01.mp3'},
+            {word: 'ي', meaning: 'my', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -102,8 +105,8 @@ export const lesson001 = {
           convo: 'زي الفل. انت عامل ايه؟',
           speaker: audiobook,
           vocab: [
-            {word: 'like :زي', url: '/audio1970771774_01.mp3'},
-            {word: 'jasmine : الفل', url: '/audio1970771774_01.mp3'},
+            {word: 'زي', meaning: 'like', url: '/audio1970771774_01.mp3'},
+            {word: 'الفل', meaning: 'jasmine', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -116,8 +119,8 @@ export const lesson001 = {
           convo: 'حلوة اوي',
           speaker: speaker4,
           vocab: [
-            {word: 'pretty : حلوة', url: '/audio1970771774_01.mp3'},
-            {word: 'very : اوي', url: '/audio1970771774_01.mp3'},
+            {word: 'حلوة', meaning: 'pretty', url: '/audio1970771774_01.mp3'},
+            {word: 'اوي', meaning: 'very', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -125,7 +128,7 @@ export const lesson001 = {
           convo: 'نعم؟',
           speaker: speaker1,
           vocab: [
-            {word: 'yes : نعم', url: '/audio1970771774_01.mp3'},
+            {word: 'نعم', meaning: 'yes', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -133,8 +136,8 @@ export const lesson001 = {
           convo: 'الشنطة حلوة',
           speaker: speaker4,
           vocab: [
-            {word: 'the : ال', url: '/audio1970771774_01.mp3'},
-            {word: 'bag : شنطة', url: '/audio1970771774_01.mp3'},
+            {word: 'ال', meaning: 'the', url: '/audio1970771774_01.mp3'},
+            {word: 'شنطة', meaning: 'bag', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -142,9 +145,7 @@ export const lesson001 = {
           convo: 'معلش؟ الشنطة؟',
           speaker: speaker4,
           vocab: [
-            {word: 'the : ال', url: '/audio1970771774_01.mp3'},
-            {word: 'bag : شنطة', url: '/audio1970771774_01.mp3'},
-            {word: 'sorry : معلش', url: '/audio1970771774_01.mp3'},
+            {word: 'معلش', meaning: 'sorry', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -152,8 +153,8 @@ export const lesson001 = {
           convo: 'ايوة الشنطة جميلة',
           speaker: speaker4,
           vocab: [
-            {word: 'yes : ايوة', url: '/audio1970771774_01.mp3'},
-            {word: 'beatiful : جميلة', url: '/audio1970771774_01.mp3'},
+            {word: 'ايوة', meaning: 'yes', url: '/audio1970771774_01.mp3'},
+            {word: 'جميلة', meaning: 'beatiful', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -161,8 +162,8 @@ export const lesson001 = {
           convo: 'دنيا تعالي هنا',
           speaker: speaker2,
           vocab: [
-            {word: 'come : تعالي', url: '/audio1970771774_01.mp3'},
-            {word: 'here : هنا', url: '/audio1970771774_01.mp3'},
+            {word: 'تعالي', meaning: 'come (f)', url: '/audio1970771774_01.mp3'},
+            {word: 'هنا', meaning: 'here', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -170,7 +171,7 @@ export const lesson001 = {
           convo: 'لا مؤاخذة',
           speaker: speaker2,
           vocab: [
-            {word: 'excuse me : لا مؤاخذة', url: '/audio1970771774_01.mp3'},
+            {word: 'لا مؤاخذة', meaning: 'excuse me', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -178,7 +179,7 @@ export const lesson001 = {
           convo: 'لو سمحتي',
           speaker: speaker1,
           vocab: [
-            {word: 'please (f) : لو سمحتي', url: '/audio1970771774_01.mp3'},                 
+            {word: 'لو سمحتي', meaning: 'please (f)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -186,8 +187,8 @@ export const lesson001 = {
           convo: 'شارع السلام في العجمي',
           speaker: speaker1,
           vocab: [
-            {word: 'street : شارع', url: '/audio1970771774_01.mp3'},
-            {word: 'in : في', url: '/audio1970771774_01.mp3'},
+            {word: 'شارع', meaning: 'street', url: '/audio1970771774_01.mp3'},
+            {word: 'في', meaning: 'in', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -340,3 +341,16 @@ export const lesson002 = {
     },
   ]
 }
+
+
+export const lesson001Vocab = [];
+
+lesson001.sections.forEach(section => {
+  section.slides.forEach(slide => {
+    if (slide.vocab) {
+      slide.vocab.forEach(aWord =>{
+        lesson001Vocab.push(aWord.word)
+      })
+    }
+  })
+})
