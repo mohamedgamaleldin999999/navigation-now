@@ -158,6 +158,19 @@
   justify-content: center;
 }
 
+.goals {
+  display: flex;
+}
+
+.goal {
+  padding: 5px;
+  margin: 5px;
+  background-color: #f6efef;
+  border: #ceb8b8 2px solid;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
 .story-img {
   width: 40%;
   border-radius: 8px;
@@ -219,6 +232,10 @@ h6 {
 }
 
 @media screen and (max-width: 725px) {
+  .goal {
+    font-size: 0.6em;
+  }
+
   .story-img {
     width: 100%;
     min-width: 100%;
@@ -226,6 +243,7 @@ h6 {
 
   .description {
     min-width: 95%;
+    font-size: 0.8em;
   }
 
   .convo-div {

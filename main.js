@@ -54,6 +54,12 @@ lessons.forEach(lesson => {
       if (slide.hasOwnProperty('intro')) {
         const description = createAnElement('p', slideElement, 'description', slide.description);
         img.classList.add('intro-img');
+        if (slide.goals) {
+          const goalsDiv = createAnElement('div', slideElement, 'goals')
+          slide.goals.forEach(goal => {
+            createAnElement('p', goalsDiv, 'goal', goal)
+          })
+        }
       }
 
       if(slide.vocab){

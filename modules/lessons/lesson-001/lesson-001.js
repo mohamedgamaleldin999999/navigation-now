@@ -25,11 +25,11 @@ export const lesson001 = {
           title: 'Introduction',
           intro: true,
           description: 'In this lesson you will learn:',
-          vocab: [
-            {word: '1- how to greet other people'},
-            {word: "2- to ask people how they're doing"},
-            {word: '3- to say how you feel'},
-            {word: '4- to distinguish between formal and informal greetings'},
+          goals: [
+            '1- how to greet other people',
+            "2- to ask people how they're doing",
+            '3- to say how you feel',
+            '4- to distinguish between formal and informal greetings',
           ],
 
         }
@@ -196,56 +196,6 @@ export const lesson001 = {
           convo: 'confused look',
           speaker: narrator,
         },
-      ]
-    },
-    {
-      title: 'Introduction',
-      slides: [
-        {
-          imgURl: '/modules/lessons/lesson-001/images/001.png',
-          title: 'introduction',
-          firstBox: '',
-          secondBox: 'wow lesson',
-          thirdBox: 'please start',
-        }
-      ]
-    },
-    {
-      title: 'Story',
-      slides: [
-        {
-          imgURl: '/modules/lessons/lesson-001/images/002.png',
-          convo: 'صباح الخير أستاذة ندى، ازيك؟',
-          speaker: audiobook,
-          vocab: [
-            {word: 'morning : صباح', url: '/audio1970771774_01.mp3'},
-            {word: 'good : الخير', url: '/audio1970771774_02.mp3'},
-            {word: 'Ms : أستاذة', url: '/audio1970771774_03.mp3'},
-            {word: 'how are you? (m) : ازيك؟', url: '/audio1970771774_04.mp3'},
-          ]
-        },
-        {
-          imgURl: '/modules/lessons/lesson-001/images/003.png',
-          convo: 'صباح النور أستاذ أحمد. الحمد لله بخير انت ازيك؟',
-          speaker: audiobook,
-          vocab: [
-            {word: 'light : النور', url: '/audio1970771774_01.mp3'},
-            {word: 'Mr : أستاذ', url: '/audio1970771774_01.mp3'},
-            {word: 'thank god : الحمد لله', url: '/audio1970771774_01.mp3'},
-            {word: 'fine : بخير', url: '/audio1970771774_01.mp3'},
-            {word: 'you (m) : انت', url: '/audio1970771774_01.mp3'},
-            {word: 'how are you (f) : ازيك؟', url: '/audio1970771774_01.mp3'},                 
-          ]
-        },
-        {
-          imgURl: '/modules/lessons/lesson-001/images/017.png',
-          convo: 'لو سمحتي',
-          speaker: speaker1,
-          vocab: [
-            {word: 'please (f) : لو سمحتي', url: '/audio1970771774_01.mp3'},                 
-          ]
-        },
-
       ]
     },
   ]
