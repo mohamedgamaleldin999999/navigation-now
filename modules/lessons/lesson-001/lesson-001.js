@@ -203,8 +203,25 @@ export const lesson001 = {
       slides: [
         {
           title: 'flash cards',
-          iframe: '<iframe src="https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1" height="500" width="100%" style="border:0"></iframe>'
-        }
+          quizletUrl: "https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1",
+        },
+        {
+          title: 'Learn',
+          quizletUrl: "https://quizlet.com/871087977/learn/embed?i=2zi8pz&x=1jj1",
+        },
+        {
+          title: 'Spell',
+          quizletUrl: "https://quizlet.com/871087977/spell/embed?i=2zi8pz&x=1jj1",
+        },
+        {
+          title: 'test',
+          quizletUrl: "https://quizlet.com/871087977/test/embed?i=2zi8pz&x=1jj1",
+        },
+        {
+          title: 'play',
+          quizletUrl: "https://quizlet.com/871087977/match/embed?i=2zi8pz&x=1jj1",
+        },
+
       ]
     },
   ],

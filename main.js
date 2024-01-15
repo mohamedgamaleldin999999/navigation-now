@@ -78,6 +78,10 @@ lessons.forEach(lesson => {
             })
           };
           break;
+        case 'vocabulary excersises':
+          const quizletElement = createAnElement('iframe', slideElement, 'quizlet');
+          quizletElement.setAttribute('src', slide.quizletUrl);
+          console.log('sdsds')
         default:
           console.log("Unknown type");
       }
