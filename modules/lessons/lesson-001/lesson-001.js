@@ -125,10 +125,10 @@ export const lesson001 = {
         },
         {
           imgURl: '/modules/lessons/lesson-001/images/011.png',
-          convo: 'نعم؟',
+          convo: 'ايوة؟',
           speaker: speaker1,
           vocab: [
-            {word: 'نعم', meaning: 'yes', url: '/audio1970771774_01.mp3'},
+            {word: 'ايوة', meaning: 'yes', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -150,10 +150,10 @@ export const lesson001 = {
         },
         {
           imgURl: '/modules/lessons/lesson-001/images/014.png',
-          convo: 'ايوة الشنطة جميلة',
+          convo: 'اه الشنطة جميلة',
           speaker: speaker4,
           vocab: [
-            {word: 'ايوة', meaning: 'yes', url: '/audio1970771774_01.mp3'},
+            {word: 'اه', meaning: 'yes', url: '/audio1970771774_01.mp3'},
             {word: 'جميلة', meaning: 'beatiful', url: '/audio1970771774_01.mp3'},
           ]
         },
@@ -198,7 +198,16 @@ export const lesson001 = {
         },
       ]
     },
-  ]
+    {
+      title: 'vocabulary excersises',
+      slides: [
+        {
+          title: 'flash cards',
+          iframe: '<iframe src="https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1" height="500" width="100%" style="border:0"></iframe>'
+        }
+      ]
+    },
+  ],
 }
 
 export const lesson002 = {
@@ -299,7 +308,8 @@ lesson001.sections.forEach(section => {
   section.slides.forEach(slide => {
     if (slide.vocab) {
       slide.vocab.forEach(aWord =>{
-        lesson001Vocab.push(aWord.word)
+        const pair = `${aWord.word}:${aWord.meaning}`
+        lesson001Vocab.push(pair)
       })
     }
   })

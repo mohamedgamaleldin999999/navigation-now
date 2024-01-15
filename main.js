@@ -41,6 +41,9 @@ lessons.forEach(lesson => {
       const slideTitle = createAnElement('h6', slideElement, 'slide-title', `${lessons.indexOf(lesson)+1} - ${lesson.chapter} <br> ${lesson.title} > ${section.title}`);
       slideTitle.classList.add('display-none');
       
+
+
+      
       const mainDiv = createAnElement('div', slideElement, 'main-div');
 
       const img = createAnElement('img', mainDiv, 'story-img');
