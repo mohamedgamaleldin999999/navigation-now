@@ -40,45 +40,46 @@ lessons.forEach(lesson => {
       
       const slideTitle = createAnElement('h6', slideElement, 'slide-title', `${lessons.indexOf(lesson)+1} - ${lesson.chapter} <br> ${lesson.title} > ${section.title}`);
       slideTitle.classList.add('display-none');
-      
-
-
-      
       const mainDiv = createAnElement('div', slideElement, 'main-div');
 
-      const img = createAnElement('img', mainDiv, 'story-img');
-      img.setAttribute('src', slide.imgURl);
 
-      const convoDiv = createAnElement('div', slideElement, 'convo-div');
-      const convoTitle = createAnElement('h6', convoDiv, 'convo-title', slide.speaker);
-      const Sentences = createAnElement('div', convoDiv, 'sentences');
-      const convoBox = createAnElement('p', Sentences, 'convo-box', slide.convo);
+      switch (section.title) {
+        case 'Story':
+          const img = createAnElement('img', mainDiv, 'story-img');
+          img.setAttribute('src', slide.imgURl);
+    
+          const convoDiv = createAnElement('div', slideElement, 'convo-div');
+          const convoTitle = createAnElement('h6', convoDiv, 'convo-title', slide.speaker);
+          const Sentences = createAnElement('div', convoDiv, 'sentences');
+          const convoBox = createAnElement('p', Sentences, 'convo-box', slide.convo);
+          if(slide.vocab){
+            const vocabBigDiv = createAnElement('div', slideElement, 'vocab-big-div');
+            const vocabTitle = createAnElement('h6', vocabBigDiv, 'vocab-title', 'New Vocabulary');
+            const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
+            const vocabArray = slide.vocab
+            for (let i = 0; i< vocabArray.length; i++){
+              const vocabItem = createAnElement('p', vocabDiv, 'vocab-box', `${vocabArray[i].meaning} : ${vocabArray[i].word}`);
+              vocabItem.onclick = function(){
+                playSound(vocabArray[i].url)
+              };
+            }  
+          }
+          break;
 
-      if (slide.hasOwnProperty('intro')) {
-        const description = createAnElement('p', slideElement, 'description', slide.description);
-        img.classList.add('intro-img');
-        if (slide.goals) {
-          const goalsDiv = createAnElement('div', slideElement, 'goals')
-          slide.goals.forEach(goal => {
-            createAnElement('p', goalsDiv, 'goal', goal)
-          })
-        }
-      }
-
-      if(slide.vocab){
-        const vocabBigDiv = createAnElement('div', slideElement, 'vocab-big-div');
-        const vocabTitle = createAnElement('h6', vocabBigDiv, 'vocab-title', 'New Vocabulary');
-        if (slide.hasOwnProperty('intro')){
-          vocabTitle.classList.add('display-none');
-        }
-        const vocabDiv = createAnElement('div', vocabBigDiv, 'vocab-div');
-        const vocabArray = slide.vocab
-        for (let i = 0; i< vocabArray.length; i++){
-          const vocabItem = createAnElement('p', vocabDiv, 'vocab-box', `${vocabArray[i].meaning} : ${vocabArray[i].word}`);
-          vocabItem.onclick = function(){
-            playSound(vocabArray[i].url)
+        case "Introduction":
+          const introImg = createAnElement('img', mainDiv, 'story-img');
+          introImg.setAttribute('src', slide.imgURl);
+          const description = createAnElement('p', slideElement, 'description', slide.description);
+          introImg.classList.add('intro-img');
+          if (slide.goals) {
+            const goalsDiv = createAnElement('div', slideElement, 'goals')
+            slide.goals.forEach(goal => {
+              createAnElement('p', goalsDiv, 'goal', goal)
+            })
           };
-        }  
+          break;
+        default:
+          console.log("Unknown type");
       }
     })
   })
