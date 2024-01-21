@@ -220,6 +220,7 @@ export const lesson001 = {
         {
           title: 'Section Introduction',
           imgURl: '/modules/lessons/lesson-001/images/001.png',
+          description: 'Enjoy the life of understanding'
         },
         {
           title: 'explanation',
