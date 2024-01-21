@@ -40,73 +40,80 @@ export const lesson001 = {
       slides: [
         {
           imgURl: '/modules/lessons/lesson-001/images/002.png',
-          convo: 'صباح الخير أستاذة ندى، ازيك؟',
+          convo: 'صباح الخير أستاذة ندى',
           speaker: audiobook,
           vocab: [
             {word: 'صباح', meaning: 'morning', url: '/audio1970771774_01.mp3'},
-            {word: 'الخير', meaning: 'good', url: '/audio1970771774_01.mp3'},
+            {word: 'الخير', meaning: 'the goodness', url: '/audio1970771774_01.mp3'},
             {word: 'أستاذة', meaning: 'Ms', url: '/audio1970771774_01.mp3'},
-            {word: 'ازيك؟', meaning: 'how are you? (f)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
           imgURl: '/modules/lessons/lesson-001/images/003.png',
-          convo: 'صباح النور أستاذ أحمد. الحمد لله بخير انت ازيك؟',
+          convo: 'صباح النور أستاذ أحمد.ازاي حضرتك',
           speaker: audiobook,
           vocab: [
             {word: 'النور', meaning: 'light', url: '/audio1970771774_01.mp3'},
             {word: 'أستاذ', meaning: 'Mr', url: '/audio1970771774_01.mp3'},
-            {word: 'الحمد لله', meaning: 'thank god', url: '/audio1970771774_01.mp3'},
-            {word: 'بخير', meaning: 'fine', url: '/audio1970771774_01.mp3'},
-            {word: 'انت', meaning: 'you (m)', url: '/audio1970771774_01.mp3'},
-            {word: 'ازيك؟', meaning: 'how are you (m)', url: '/audio1970771774_01.mp3'},
-          ]
-        },
-        {
-          imgURl: '/modules/lessons/lesson-001/images/004.png',
-          convo: 'مساء الخير أستاذة رضوى',
-          speaker: audiobook,
-          vocab: [
-            {word: 'مساء', meaning: 'evening', url: '/audio1970771774_01.mp3'},
-          ]
-        },
-        {
-          imgURl: '/modules/lessons/lesson-001/images/005.png',
-          convo: 'مساء النور أستاذ طارق. عامل ايه؟',
-          speaker: audiobook,
-          vocab: [
-            {word: 'عامل ايه', meaning: 'how are you (m)', url: '/audio1970771774_01.mp3'},
+            {word: 'ازاي', meaning: 'how', url: '/audio1970771774_01.mp3'},
+            {word: 'حضرتك', meaning: 'you (m, formal)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
           imgURl: '/modules/lessons/lesson-001/images/006.png',
-          convo: 'كويس جدا الحمد لله. انتي عاملة ايه؟',
+          convo: 'كويس جدا الحمد لله. حضرتك عاملة ايه؟',
           speaker: audiobook,
           vocab: [
-            {word: 'عاملة ايه', meaning: 'how are you (f)', url: '/audio1970771774_01.mp3'},
-            {word: 'انتي', meaning: 'you (f)', url: '/audio1970771774_01.mp3'},
             {word: 'كويس', meaning: 'good', url: '/audio1970771774_01.mp3'},
             {word: 'جدا', meaning: 'very', url: '/audio1970771774_01.mp3'},
+            {word: 'الحمد لله', meaning: 'thank god', url: '/audio1970771774_01.mp3'},
+            {word: 'حضرتك', meaning: 'you (f, formal)', url: '/audio1970771774_01.mp3'},
+            {word: 'عاملة ايه', meaning: 'how are you doing (f)', url: '/audio1970771774_01.mp3'},
+          ]
+        },
+        {
+          imgURl: '/modules/lessons/lesson-001/images/004.png',
+          convo: 'مساء الخير أستاذ طارق ازيك؟',
+          speaker: audiobook,
+          vocab: [
+            {word: 'مساء', meaning: 'evening', url: '/audio1970771774_01.mp3'},
+            {word: 'ازيك؟', meaning: 'how are you (m)', url: '/audio1970771774_01.mp3'},
+          ]
+        },
+        {
+          imgURl: '/modules/lessons/lesson-001/images/005.png',
+          convo: 'مساء النور أستاذة رضوى.أنا بخير الحمد لله. انتي ازيك؟',
+          speaker: audiobook,
+          vocab: [
+            {word: 'بخير', meaning: 'In good condition', url: '/audio1970771774_01.mp3'},
+            {word: 'أنا', meaning: 'I [am]', url: '/audio1970771774_01.mp3'},
+            {word: 'ازيك؟', meaning: 'how are you (f)', url: '/audio1970771774_01.mp3'},
+
           ]
         },
         {
           imgURl: '/modules/lessons/lesson-001/images/007.png',
-          convo: 'ايه يا صاحبي ايه الاخبار؟',
+          convo: 'ايه الاخبار يا صاحبي؟ كله تمام؟',
           speaker: audiobook,
           vocab: [
             {word: 'ايه', meaning: 'what', url: '/audio1970771774_01.mp3'},
+            {word: 'أخبار', meaning: 'news', url: '/audio1970771774_01.mp3'},
             {word: 'يا', meaning: 'hey', url: '/audio1970771774_01.mp3'},
             {word: 'صاحب', meaning: 'friend', url: '/audio1970771774_01.mp3'},
             {word: 'ي', meaning: 'my', url: '/audio1970771774_01.mp3'},
+            {word: 'كله', meaning: 'everything', url: '/audio1970771774_01.mp3'},
+            {word: 'تمام', meaning: 'fine', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
           imgURl: '/modules/lessons/lesson-001/images/008.png',
-          convo: 'زي الفل. انت عامل ايه؟',
+          convo: 'زي الفل يا صاحبي. انت عامل ايه؟',
           speaker: audiobook,
           vocab: [
             {word: 'زي', meaning: 'like', url: '/audio1970771774_01.mp3'},
             {word: 'الفل', meaning: 'jasmine', url: '/audio1970771774_01.mp3'},
+            {word: 'انت', meaning: 'you (m)', url: '/audio1970771774_01.mp3'},
+            {word: 'عامل ايه', meaning: 'how are you doing (m)', url: '/audio1970771774_01.mp3'},
           ]
         },
         {
@@ -205,23 +212,16 @@ export const lesson001 = {
           title: 'flash cards',
           quizletUrl: "https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1",
         },
+      ]
+    },
+    {
+      title: 'Grammar',
+      slides: [
         {
-          title: 'Learn',
-          quizletUrl: "https://quizlet.com/871087977/learn/embed?i=2zi8pz&x=1jj1",
+          title: 'explanation',
+          quizletUrl: "https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1",
+          imgURl: '/modules/lessons/lesson-001/images/001.png',
         },
-        {
-          title: 'Spell',
-          quizletUrl: "https://quizlet.com/871087977/spell/embed?i=2zi8pz&x=1jj1",
-        },
-        {
-          title: 'test',
-          quizletUrl: "https://quizlet.com/871087977/test/embed?i=2zi8pz&x=1jj1",
-        },
-        {
-          title: 'play',
-          quizletUrl: "https://quizlet.com/871087977/match/embed?i=2zi8pz&x=1jj1",
-        },
-
       ]
     },
   ],
