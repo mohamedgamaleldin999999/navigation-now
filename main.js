@@ -41,6 +41,9 @@ lessons.forEach(lesson => {
       const slideTitle = createAnElement('h6', slideElement, 'slide-title', `${lessons.indexOf(lesson)+1} - ${lesson.chapter} <br> ${lesson.title} > ${section.title}`);
       slideTitle.classList.add('display-none');
       const mainDiv = createAnElement('div', slideElement, 'main-div');
+      if(slide.title === 'Section Introduction'){
+        createAnElement('h1', slideElement, 'section-intro', section.title)
+      }
 
 
       switch (section.title) {
@@ -67,6 +70,7 @@ lessons.forEach(lesson => {
           break;
 
         case "Introduction":
+        case "Grammar":
           const introImg = createAnElement('img', mainDiv, 'story-img');
           introImg.setAttribute('src', slide.imgURl);
           const description = createAnElement('p', slideElement, 'description', slide.description);

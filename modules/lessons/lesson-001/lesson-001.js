@@ -218,9 +218,15 @@ export const lesson001 = {
       title: 'Grammar',
       slides: [
         {
+          title: 'Section Introduction',
+          imgURl: '/modules/lessons/lesson-001/images/001.png',
+        },
+        {
           title: 'explanation',
           quizletUrl: "https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1",
           imgURl: '/modules/lessons/lesson-001/images/001.png',
+          description: `The informal form of address is used within the family, among friends
+          and acquaintances, and often also among colleagues.`
         },
       ]
     },
