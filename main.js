@@ -46,7 +46,11 @@ lessons.forEach(lesson => {
       }
 
 
-      switch (section.title) {
+      switch (slide.type) {
+        case 'section-intro':
+          createAnElement('h1', slideElement, 'section-intro', section.title);
+          break;
+
         case 'Story':
           const img = createAnElement('img', mainDiv, 'story-img');
           img.setAttribute('src', slide.imgURl);
@@ -69,8 +73,8 @@ lessons.forEach(lesson => {
           }
           break;
 
-        case "Introduction":
-        case "Grammar":
+        case "intro":
+        case "grammar":
           const introImg = createAnElement('img', mainDiv, 'story-img');
           introImg.setAttribute('src', slide.imgURl);
           const description = createAnElement('p', slideElement, 'description', slide.description);

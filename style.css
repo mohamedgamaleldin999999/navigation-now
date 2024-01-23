@@ -153,6 +153,12 @@
   background-color: aqua;
 }
 
+.section-intro {
+  width: 100%;
+  height: 100%;
+  font-size: 200%;
+}
+
 .main-div {
   display: flex;
   justify-content: center;

@@ -13,6 +13,7 @@ export const lesson001 = {
       title: 'Introduction',
       slides: [
         {
+          type: 'intro',
           imgURl: '/modules/lessons/lesson-001/images/001.png',
           title: 'Introduction',
           intro: true,
@@ -21,6 +22,7 @@ export const lesson001 = {
           with greetings in Egyption Arabic. Then ${speaker4} comes up and starts talking to him.`,
         },
         {
+          type: 'Intro',
           imgURl: '/modules/lessons/lesson-001/images/001.png',
           title: 'Introduction',
           intro: true,
@@ -39,6 +41,7 @@ export const lesson001 = {
       title: 'Story',
       slides: [
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/002.png',
           convo: 'صباح الخير أستاذة ندى',
           speaker: audiobook,
@@ -49,6 +52,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/003.png',
           convo: 'صباح النور أستاذ أحمد.ازاي حضرتك',
           speaker: audiobook,
@@ -60,6 +64,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/006.png',
           convo: 'كويس جدا الحمد لله. حضرتك عاملة ايه؟',
           speaker: audiobook,
@@ -72,6 +77,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/004.png',
           convo: 'مساء الخير أستاذ طارق ازيك؟',
           speaker: audiobook,
@@ -81,6 +87,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/005.png',
           convo: 'مساء النور أستاذة رضوى.أنا بخير الحمد لله. انتي ازيك؟',
           speaker: audiobook,
@@ -92,6 +99,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/007.png',
           convo: 'ايه الاخبار يا صاحبي؟ كله تمام؟',
           speaker: audiobook,
@@ -106,6 +114,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/008.png',
           convo: 'زي الفل يا صاحبي. انت عامل ايه؟',
           speaker: audiobook,
@@ -117,11 +126,13 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/009.png',
           convo: 'no conversation',
           speaker: 'conversation:',
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/010.png',
           convo: 'حلوة اوي',
           speaker: speaker4,
@@ -131,6 +142,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/011.png',
           convo: 'ايوة؟',
           speaker: speaker1,
@@ -139,6 +151,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/012.png',
           convo: 'الشنطة حلوة',
           speaker: speaker4,
@@ -148,6 +161,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/013.png',
           convo: 'معلش؟ الشنطة؟',
           speaker: speaker4,
@@ -156,6 +170,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/014.png',
           convo: 'اه الشنطة جميلة',
           speaker: speaker4,
@@ -165,6 +180,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/015.png',
           convo: 'دنيا تعالي هنا',
           speaker: speaker2,
@@ -174,6 +190,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/016.png',
           convo: 'لا مؤاخذة',
           speaker: speaker2,
@@ -182,6 +199,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/017.png',
           convo: 'لو سمحتي',
           speaker: speaker1,
@@ -190,6 +208,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/018.png',
           convo: 'شارع السلام في العجمي',
           speaker: speaker1,
@@ -199,6 +218,7 @@ export const lesson001 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/019.png',
           convo: 'confused look',
           speaker: narrator,
@@ -209,26 +229,30 @@ export const lesson001 = {
       title: 'vocabulary excersises',
       slides: [
         {
-          title: 'section-intro',
-          imgURl: '/modules/lessons/lesson-001/images/018.png',
+          type: 'section-intro',
         },
         {
+          type: 'vocabulary excersises',
           title: 'flash cards',
           quizletUrl: "https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1",
         },
         {
+          type: 'vocabulary excersises',
           title: 'Learn',
           quizletUrl: "https://quizlet.com/871087977/learn/embed?i=2zi8pz&x=1jj1",
         },
         {
+          type: 'vocabulary excersises',
           title: 'Spell',
           quizletUrl: "https://quizlet.com/871087977/spell/embed?i=2zi8pz&x=1jj1",
         },
         {
+          type: 'vocabulary excersises',
           title: 'test',
           quizletUrl: "https://quizlet.com/871087977/test/embed?i=2zi8pz&x=1jj1",
         },
         {
+          type: 'vocabulary excersises',
           title: 'play',
           quizletUrl: "https://quizlet.com/871087977/match/embed?i=2zi8pz&x=1jj1",
         },
@@ -238,13 +262,12 @@ export const lesson001 = {
       title: 'Grammar',
       slides: [
         {
-          title: 'Section Introduction',
-          imgURl: '/modules/lessons/lesson-001/images/001.png',
-          description: 'Enjoy the life of understanding'
+          type: 'section-intro',
+          imgURl:'/modules/lessons/lesson-001/images/001.png'
         },
         {
+          type: 'grammar',
           title: 'explanation',
-          quizletUrl: "https://quizlet.com/871087977/flashcards/embed?i=2zi8pz&x=1jj1",
           imgURl: '/modules/lessons/lesson-001/images/001.png',
           description: `The informal form of address is used within the family, among friends
           and acquaintances, and often also among colleagues.`
@@ -274,6 +297,7 @@ export const lesson002 = {
       title: 'Story',
       slides: [
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/002.png',
           convo: 'صباح الخير أستاذة ندى، ازيك؟',
           speaker: audiobook,
@@ -285,6 +309,7 @@ export const lesson002 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/003.png',
           convo: 'صباح النور أستاذ أحمد. الحمد لله بخير انت ازيك؟',
           speaker: audiobook,
@@ -316,6 +341,7 @@ export const lesson002 = {
       title: 'Story',
       slides: [
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/002.png',
           convo: 'صباح الخير أستاذة ندى، ازيك؟',
           speaker: audiobook,
@@ -327,6 +353,7 @@ export const lesson002 = {
           ]
         },
         {
+          type: 'Story',
           imgURl: '/modules/lessons/lesson-001/images/003.png',
           convo: 'صباح النور أستاذ أحمد. الحمد لله بخير انت ازيك؟',
           speaker: audiobook,
